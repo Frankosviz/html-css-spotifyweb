@@ -9,9 +9,14 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+img {
+    width: 100%;
+}
+
 h2 {
     font-size: 30px;
     color: white;
+    padding: 30px;
 
 }
 
@@ -36,6 +41,7 @@ h2 {
     top: 0;
     left: 200px;
     width: calc(100% - 200px);
+    z-index: 3000;
 }
 
 .btn>a {
@@ -48,7 +54,7 @@ h2 {
 main {
     /* flex-grow: 1; soluzione2: collegata al flex-schrink di #sidebar */
     width: calc(100% - 200px);
-    background-color: aqua;
+    background-color: var(--color-main);
     padding: 100px 20px 20px 20px;
     padding-top: 100px;
     overflow-y: auto;
@@ -66,30 +72,76 @@ main {
     font-weight: bold;
 }
 
-#bot-bord>hr {
-    width: 60px;
+.nav-main ul li> a:hover {
+    color: rgba(73, 72, 72, 0.582);
+}
+
+.bot-bord>hr {
+    width: 30px;
+    border: 1px solid greenyellow;
+    margin-top: 5px;
 }
 
 .nav-main>ul {
-    padding: 10px 0 50px 0;
+    padding: 10px 0 0 0;
 }
 
 .card {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
 }
 
 .container-card {
-    padding: 60px 0;
+    padding: 80px 0 150px 30px;
 }
 
+.font-centered > i {
+    font-size: 100px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.card:hover .font-centered>i{
+    display: block;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.664);
+}
+
+.card-relative {
+    position: relative;
+}
+
+.card > p {
+    color: var(--color-text);
+    font-size:medium;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.card > h4 {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+h5 {
+    padding-left: 30px;
+    color: var(--color-text);
+    font-size: 20px;
+    padding-bottom: 15px;
+}
 
 
 
 /* toolbar */
 
 #toolbar {
-    background-color: red;
+    background-color: var(--color-footer-bar);
     height: 90px;
 }
 
@@ -98,7 +150,7 @@ main {
 #sidebar {
     width: 200px;
     height: 100%;
-    background-color: orange;
+    background-color: var(--color-side-bar);
     /* flex-shrink: 0; soluzione2: collegata al flex grow del main */
 }
 
@@ -109,11 +161,16 @@ main {
     width: 250px;
     height: 50px;
     border: 1px solid white;
-    border-radius: 20px;
+    border-radius: 25px;
     line-height: 50px;
     text-align: center;
     margin-right: 20px;
     color: white;
+    margin-left: 10px;
+}
+
+.btn:hover {
+    background-color: rgba(73, 72, 72, 0.582);
 }
 
 /* flex-utility */
@@ -124,6 +181,10 @@ main {
 
 .s-between {
     justify-content: space-between;
+}
+
+.flex-start {
+    justify-content: flex-start;
 }
 
 .flex-end {
@@ -151,4 +212,122 @@ main {
     flex-direction: column;
 }
 
-/* padding utility */
+@media screen and (max-width: 878px){
+
+    /* main */
+
+    .nav-main>ul {
+        flex-wrap: wrap;
+    }
+
+    .container-card{
+        flex-wrap: wrap;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        padding-left: 0;
+    }
+
+     h2 {
+        font-size: 25px;
+        padding-left: 0;
+     }
+
+     main {
+        width: 100%;
+     }
+
+     .card {
+        width: calc(100% / 4 - 30px);
+        height: 200px;
+        margin-bottom: 50px;
+     }
+
+     .card > h4 {
+        font-size: small;
+     }
+
+     .card > p {
+        font-size: smaller;
+     }
+
+     .content {
+        position: relative;
+     }
+
+     .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+     }
+
+     .font-centered > i {
+        font-size: 25px;
+     }
+
+     h5 {
+        padding-left: 0;
+     }
+
+}
+
+     @media screen and (max-width: 639px){
+        .nav-main>ul {
+        }
+
+        .card {
+            width: calc(100% / 2 - 50px);
+        }
+
+        .font-centered > i {
+            font-size: 40px;
+        }
+
+        h2 {
+            padding-left: 0;
+        }
+     }
+
+     @media screen and (max-width: 552px){
+        .card {
+            width: calc(100% / 2 - 5px);
+            margin-bottom: 15px;
+        }
+
+        .container-card {
+            gap: 10px;
+            padding-left: 0;
+        }
+
+        h5 {
+            font-size: normal;
+        }
+
+        .card {
+            margin: 10px 0 70px 0;
+        }
+
+        .nav-main > ul {
+            padding: 20px 10px 20px 10px;
+        }
+
+        .nav-main ul > li{
+            width: calc(100% / 4 - 15px);
+            font-size: 8px;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+
+
+     }
+     
+     
+
+     
+
+
+
+     
+
