@@ -136,15 +136,6 @@ h5 {
     padding-bottom: 15px;
 }
 
-
-
-/* toolbar */
-
-#toolbar {
-    background-color: var(--color-footer-bar);
-    height: 90px;
-}
-
 /* sidebar */
 
 #sidebar {
@@ -154,6 +145,33 @@ h5 {
     /* flex-shrink: 0; soluzione2: collegata al flex grow del main */
 }
 
+#logo {
+    width: 80%;
+    padding: 10px;
+}
+
+.nav-vertical-font> img {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-vertical ul li>a {
+    text-decoration: none;
+    line-height: 30px;
+    color: white;
+} 
+
+.nav-vertical {
+    padding: 10px;
+}
+
+
+/* toolbar */
+
+#toolbar {
+    background-color: var(--color-footer-bar);
+    height: 90px;
+}
 
 /* btn utility */
 
