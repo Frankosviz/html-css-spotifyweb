@@ -450,9 +450,6 @@ h5 {
 }
 
      @media screen and (max-width: 639px){
-        .nav-main>ul {
-        }
-
         .card {
             width: calc(100% / 2 - 50px);
         }
@@ -468,6 +465,7 @@ h5 {
         .end-sidebar {
             margin-top: 108%;
      }
+}
 
      @media screen and (max-width: 552px){
         .card {
@@ -500,14 +498,4 @@ h5 {
         h2 {
             font-size: 20px;
         }
-        
-     }
-     
-     
-
-     
-
-
-
-     
-
+}
