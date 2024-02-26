@@ -326,6 +326,23 @@ h5 {
     padding-right: 10px;
 }
 
+.font-tool div > a{
+    color: white;
+    padding: 0 20px 0 20px;
+}
+
+.font-tool div > a:hover {
+    color: var(--color-main);
+}
+
+.fa-circle-play{
+    font-size: 40px;
+}
+
+.fa-circle-play:hover {
+    color: greenyellow;
+}
+
 /* btn utility */
 
 .btn {
@@ -387,11 +404,12 @@ h5 {
     justify-content: center;
 }
 
-.prova {
+
+/* .prova {
     flex-direction: column;
     align-content: flex-end;
     align-items: flex-end;
-}
+} */
 
 .column {
     flex-direction: column;
