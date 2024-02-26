@@ -149,7 +149,6 @@ h5 {
 
 #logo {
     width: 90%;
-    padding: 10px;
 }
 
 .nav-vertical-font> img {
@@ -180,6 +179,18 @@ h5 {
     min-height: 0;
 }
 
+#m-query-pad {
+    margin-top: 20px;
+}
+
+#m-query-pad > li {
+    padding-bottom: 0;
+}
+
+.container-playlist > h3 {
+    margin-top: 10px;
+}
+
 .fa-plus-contain{
     width: 50px;
     height: 50px;
@@ -203,7 +214,7 @@ h5 {
 
 .container-playlist > h3 {
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
@@ -219,7 +230,7 @@ h5 {
 }
 
 .container-playlist {
-    height: calc(100% - 80px);
+    height: calc(100% - 225px);
     overflow-y: auto;
 }
 
@@ -295,6 +306,12 @@ h5 {
     height: 50px;
 }
 
+.mini-card:hover {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
 .left-tool div > h4 {
     color: white;
     padding-left: 10px;
@@ -341,6 +358,61 @@ h5 {
 
 .fa-circle-play:hover {
     color: greenyellow;
+}
+
+.row-duration {
+    width: 90%;
+    border: 1px solid var(--color-text);
+    margin: 0 10px 0 10px;
+    background-color: var(--color-text);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.row-duration:hover .row-duration-hover{
+    border: 1px solid rgb(204, 220, 199);
+    background-color: rgb(204, 220, 199);
+}
+
+.row-duration-hover {
+    width: 30%;   
+}
+
+.row-tool div:first-child{
+    color: white;
+    font-size: smaller;
+}
+
+.row-tool div:last-child{
+    color: white;
+    font-size: smaller;
+}
+
+.font-right span > a{
+    color: white;
+    padding: 0 10px 0 10px;
+}
+
+.font-right span > a:hover{
+    color: var(--color-main);
+}
+
+.row-duration-right {
+    width: 30%;
+    border: 1px solid var(--color-text);
+    background-color: var(--color-text);
+    margin: 0 20px 0 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.row-duration-right:hover .row-duration-right-hover{
+    border: 1px solid rgb(204, 220, 199);
+    background-color: rgb(204, 220, 199);
+}
+
+.row-duration-right-hover{
+    width: 50%;
 }
 
 /* btn utility */
@@ -416,11 +488,18 @@ h5 {
 }
 
 @media screen and (max-width: 1440px){
-
+    #m-query-pad > li{
+        padding: 0;
+     }
+     .container-playlist>h3 {
+        margin-top: 15px;
+     }
 }
 
 @media screen and (max-width: 1024px){
-    
+    #m-query-pad > li{
+        padding: 0;
+     }
 }
 
 @media screen and (max-width: 878px){
@@ -481,11 +560,11 @@ h5 {
      }
 
      .nav-vertical ul li>a {
-        font-size: smaller;
+        font-size: 13px;
     } 
 
-    .playlist ul>li {
-        font-size: smaller;
+    .container-playlist > h3 {
+        font-size: 15px;
     }
 
     .end-sidebar {
@@ -499,6 +578,18 @@ h5 {
 
      .fa-plus-contain>i {
         font-size: 20px;
+     }
+
+     .container-playlist ul li > p{
+        font-size: 13px;
+     }
+
+     .container-playlist ul li {
+        padding: 10px 0 10px 0;
+     }
+
+     #m-query-pad > li{
+        padding: 0;
      }
 
 }
@@ -515,6 +606,23 @@ h5 {
         h2 {
             padding-left: 0;
         }
+
+        .container-playlist ul li > p{
+            font-size: 10px;
+         }
+
+         #m-query-pad li >a {
+            font-size: 10px;
+         }
+
+         .end-sidebar div > a{
+            font-size: 10px;
+         }
+
+         .end-sidebar div >h4 {
+            font-size: 12px;
+         }
+
 }
 
      @media screen and (max-width: 552px){
