@@ -282,6 +282,50 @@ h5 {
     height: 90px;
 }
 
+.left-tool, .mid-tool, .right-tool{
+    width: calc(100% / 3);
+}
+
+.left-tool {
+    padding-left: 10px;
+}
+
+.mini-card {
+    width: 50px;
+    height: 50px;
+}
+
+.left-tool div > h4 {
+    color: white;
+    padding-left: 10px;
+}
+
+.left-tool div > p {
+    color: var(--color-text);
+    padding-left: 10px;
+}
+
+.font-left {
+    padding-left: 80px;
+}
+
+.font-left span > a{
+    font-size: 20px;
+    color: var(--color-text);
+}
+
+.font-left span:first-child a:hover{
+    color: red;
+}
+
+.font-left span:last-child a:hover{
+    color: var(--color-main);
+}
+
+.fa-heart {
+    padding-right: 10px;
+}
+
 /* btn utility */
 
 .btn {
@@ -325,6 +369,10 @@ h5 {
 .align {
     align-items: center;
     align-content: center;
+}
+
+.align-self {
+    align-self: center;
 }
 
 .gap {
