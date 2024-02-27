@@ -64,7 +64,6 @@ main {
 .content {
     height: calc(100vh - 90px);
     width: 100%;
-    background-color: green;
 }
 
 .nav-main ul li> a {
@@ -74,14 +73,34 @@ main {
 }
 
 .nav-main ul li> a:hover {
-    color: rgba(73, 72, 72, 0.582);
+    color: white;
 }
 
-.bot-bord>hr {
-    width: 30px;
-    border: 1px solid greenyellow;
-    margin-top: 5px;
+.nav-main a:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 50%;
+    margin: 0 auto;
+    background-color: transparent;
 }
+
+a:hover,
+.nav-main, .active  {
+    color: white;
+}
+
+.nav-main a{
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.nav-main a.active:after,
+.nav-main a:hover:after{
+    background-color: greenyellow;
+}
+
+
 
 .nav-main>ul {
     padding: 10px 0 0 0;
@@ -140,6 +159,7 @@ h5 {
 
 .rounded-card>img {
     border-radius: 50%;
+    overflow: hidden;
 }
 
 /* sidebar */
@@ -205,6 +225,8 @@ h5 {
     height: 50px;
     background-color: #A3A3A3;
     position: relative;
+    animation-name: pulsing;
+    animation-duration: 4s;
 }
 
 .fa-plus-contain>i {
@@ -563,13 +585,6 @@ h5 {
         position: relative;
      }
 
-     .header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-     }
-
      .font-centered > i {
         font-size: 25px;
      }
@@ -822,3 +837,12 @@ h5 {
         display: none;
     }
 }
+
+/* animation */
+
+@keyframes pulsing {
+    0%   {background-color: var(--color-text);}
+    25%  {background-color: var(--color-footer-bar);}
+    50%  {background-color: var(--color-main);}
+    100% {background-color: var(--color-text);}
+  }
